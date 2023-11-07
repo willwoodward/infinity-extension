@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  /*background-image: url("images/blob-scene-haikei.svg");*/
+  background-color: rgb(255, 255, 255);
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html{
+  border: 0.8px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+#heading1 {
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Open Sans";
+  color: #495251;
+}
+
+#summarise_again,
+#submit,
+#text_input {
+  border-radius: 1em;
+  padding: 0.4em;
+  border: none;
+  background-color: white;
+}
+
+#main_div {
+  text-align: center;
+  margin-bottom: 2em;
+
+}
+
+#text_input {
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 0.5em 0;
+}
+
+#summary_length {
+  border-radius: 5px;
+  border-color: black;
+  border: 1px black solid;
+  outline: none;
+}
+
+#summarise {
+  position: relative;
+  border-color: white;
+  border: none;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  user-select: none;
+  font: 1.2em;
+  font-family: 'Open Sans';
+  color: white;
+}
+
+#logo {
+  height: 75px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.6em;
+}
+
+#summarise:hover::after {
+  width: 110px;
+  height: 110px;
+}
+
+#summarise::after {
+  content: "";
+  position: absolute;
+  background-color: #009492;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 10em;
+  transition: width 800ms, height 800ms;
+}
+
+#summarise.clicked::after {
+  z-index: 99;
+  width: 600px;
+  height: 900px;
+  pointer-events: none;
+}
+
+#after_click {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 1em;
+}
+
+#output {
+  margin: 1em 0;
+  color: white;
+  font-size: 1.2em;
+}
+
+#after_click.clicked {
+  display: block;
+}
+
+#steven_bradley {
+  margin: 1em auto;
+  display: none;
+}

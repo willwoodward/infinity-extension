@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Infinity Extension",
+  "description": "Summarisation and query chrome extension using an LLM",
+  "version": "1.0",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "images/Infinity logo i drew square.png"
+  },
+  "permissions": ["tabs"]
+}
